@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#080a10">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:background="#0D111827">
+
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹ Volver"
+            android:textSize="16sp"
+            android:textColor="#94a3b8"
+            android:paddingEnd="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/tvDayTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DÍA"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#38bdf8"
+            android:letterSpacing="0.1" />
+
+        <!-- Spacer para centrar el título -->
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+    </LinearLayout>
+
+    <!-- Divisor -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#26389870" />
+
+    <!-- Contenido central -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <!-- Nombre del ejercicio -->
+            <TextView
+                android:id="@+id/tvExName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cargando..."
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#f1f5f9"
+                android:gravity="center"
+                android:paddingBottom="4dp" />
+
+            <!-- Series / Reps -->
+            <TextView
+                android:id="@+id/tvExSets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 x 10"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#38bdf8"
+                android:paddingBottom="20dp"
+                android:fontFamily="monospace" />
+
+            <!-- GIF -->
+            <ImageView
+                android:id="@+id/ivExGif"
+                android:layout_width="340dp"
+                android:layout_height="280dp"
+                android:background="#FFFFFF"
+                android:scaleType="centerInside"
+                android:padding="4dp" />
+
+            <!-- Tip card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_tip_card"
+                android:padding="16dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BEBÉ TIP"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#38bdf8"
+                    android:letterSpacing="0.1"
+                    android:paddingBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tvExTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aquí va el tip del ejercicio."
+                    android:textSize="14sp"
+                    android:textColor="#e2e8f0"
+                    android:lineSpacingMultiplier="1.5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer de navegación -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        android:padding="20dp"
+        android:background="#F0080a10">
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_nav_btn"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Anterior" />
+
+        <TextView
+            android:id="@+id/tvExIndex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1 / 5"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#94a3b8"
+            android:fontFamily="monospace" />
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_nav_btn"
+            android:src="@drawable/ic_arrow_right"
+            android:contentDescription="Siguiente" />
+
+    </LinearLayout>
+
+</LinearLayout>
